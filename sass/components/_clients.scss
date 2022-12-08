@@ -1,0 +1,47 @@
+.clients {
+  @include section;
+}
+
+.clients__heading {
+  margin-bottom: 50px;
+
+  text-align: center;
+  @include text-styles($firstFontSize, 700, false, false);
+}
+
+.clients__list {
+  display: flex;
+  list-style: none;
+}
+.clients__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.clients__link {
+  width: 170px;
+  height: 92px;
+
+  color: $iconsColor;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid $iconsColor;
+  border-radius: 4px;
+
+  @include transition;
+  transition-property: color, border-color;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+    border-color: $accentColor;
+  }
+}
+.clients__icon {
+  fill: currentColor;
+}

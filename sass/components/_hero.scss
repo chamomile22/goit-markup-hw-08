@@ -1,0 +1,29 @@
+.hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  @include section(200px, 200px);
+
+  background-color: $heroBgColor;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.container--hero {
+  padding-left: 237px;
+  padding-right: 237px;
+
+  text-align: center;
+}
+.hero__heading {
+  color: $thirdTextColor;
+
+  text-align: center;
+  text-transform: uppercase;
+  @include text-styles($fontSizeH1, 900, $thirdLetterSpacing, 1.4);
+}

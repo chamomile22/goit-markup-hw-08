@@ -1,0 +1,29 @@
+body {
+  padding: 0;
+
+  background-color: white;
+  color: #212121;
+
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+  letter-spacing: var(--main-letter-spacing);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  display: block;
+  margin: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}

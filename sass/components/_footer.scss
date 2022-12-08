@@ -1,0 +1,24 @@
+.section--footer {
+  @include section(60px, 60px);
+
+  background-color: $secondBgColor;
+}
+.address__info {
+  margin-top: 20px;
+
+  list-style: none;
+  font-style: normal;
+  @include text-styles($forthFontSize, false, false, 1.7);
+}
+.footer-socials {
+  margin-top: 12px;
+  margin-left: 70px;
+}
+.footer-socials__heading {
+  margin-bottom: 20px;
+
+  color: $thirdTextColor;
+
+  text-transform: uppercase;
+  @include text-styles($forthFontSize, 700, false, false);
+}

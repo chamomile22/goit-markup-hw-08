@@ -1,0 +1,45 @@
+.footer-form {
+  margin-left: auto;
+  padding-top: 12px;
+}
+.footer-form__heading {
+  margin-bottom: 20px;
+
+  color: $thirdTextColor;
+
+  text-transform: uppercase;
+  @include text-styles($forthFontSize, 700, false, false);
+}
+.footer-form__group {
+  display: flex;
+}
+.footer-form__field {
+  width: 358px;
+  height: 50px;
+  padding: 15px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: unset;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  @include transition;
+  transition-property: border-width, border-color, color;
+
+  &:focus {
+    border-width: 1px;
+    border-color: $accentColor;
+    color: $thirdTextColor;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+
+    @include text-styles($thirdFontSize, false, false, 1.25);
+  }
+}

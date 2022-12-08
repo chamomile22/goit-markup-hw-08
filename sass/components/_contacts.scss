@@ -1,0 +1,47 @@
+.contacts {
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+}
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+.contacts__item {
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.contacts__link {
+  display: flex;
+  align-items: center;
+
+  color: $secondTextColor;
+
+  text-decoration: none;
+  @include text-styles($forthFontSize, 500, $secondLetterSpacing, false);
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+.container--footer {
+  display: flex;
+}
+.contacts__item--footer,
+.contacts__item--map {
+  margin-bottom: 9px;
+  margin-right: 0;
+}
+.contacts__link--footer,
+.contacts__link--map {
+  letter-spacing: $mainLetterSpacing;
+}
+.contacts__link--map {
+  color: $thirdTextColor;
+}

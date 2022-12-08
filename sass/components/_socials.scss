@@ -1,0 +1,49 @@
+.socials {
+  margin-top: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+}
+.socials__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.socials__link {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $iconsColor;
+
+  @include transition;
+  transition-property: color, background-color;
+
+  &:hover,
+  &:focus {
+    color: $thirdTextColor;
+    background-color: $accentColor;
+  }
+}
+.socials__icon {
+  fill: currentColor;
+}
+.socials--footer {
+  padding: 0;
+}
+.socials__link--footer {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  color: $thirdTextColor;
+}
