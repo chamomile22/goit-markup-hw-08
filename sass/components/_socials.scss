@@ -32,11 +32,11 @@
   transition-property: color, background-color;
 
   @include desktop-screen {
-  }
-  &:hover,
-  &:focus {
-    color: $thirdTextColor;
-    background-color: $accentColor;
+    &:hover,
+    &:focus {
+      color: $thirdTextColor;
+      background-color: $accentColor;
+    }
   }
 }
 .socials__icon {

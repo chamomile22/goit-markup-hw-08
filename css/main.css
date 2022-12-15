@@ -680,9 +680,11 @@ img {
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
 }
-.socials__link:hover, .socials__link:focus {
-  color: white;
-  background-color: #2196f3;
+@media screen and (min-width: 1200px) {
+  .socials__link:hover, .socials__link:focus {
+    color: white;
+    background-color: #2196f3;
+  }
 }
 
 .socials__icon {
