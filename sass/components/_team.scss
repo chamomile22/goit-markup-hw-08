@@ -1,22 +1,33 @@
 .team {
-  @include section;
-
   background-color: $thirdBgColor;
+
+  @include section;
 }
 .team__heading {
-  margin-bottom: 50px;
+  margin-bottom: 0;
 
   text-align: center;
   @include text-styles($firstFontSize, 700, false, false);
+
+  @include desktop-screen {
+    margin-bottom: 50px;
+    font-size: $firstFontSizeDesktop;
+  }
 }
 
 .team__list {
-  display: flex;
-
   list-style: none;
+
+  @include tablet-screen {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include desktop-screen {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 .team__item {
-  margin-right: 30px;
   background-color: white;
 
   border-bottom-left-radius: 4px;
@@ -24,13 +35,31 @@
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  &:last-child {
-    margin-right: 0;
+
+  margin-top: 30px;
+
+  @include tablet-screen {
+    flex-basis: 354px;
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+  @include desktop-screen {
+    flex-basis: 270px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    margin-top: 0;
   }
 }
 .team__member-info {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+
+  @include desktop-screen {
+    padding-bottom: 30px;
+  }
 }
 .team__member-name {
   padding-bottom: 10px;

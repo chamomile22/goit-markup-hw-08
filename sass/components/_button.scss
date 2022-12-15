@@ -1,5 +1,5 @@
 .button {
-  width: 216px;
+  width: 200px;
   height: 50px;
   margin-top: 30px;
 
@@ -16,10 +16,13 @@
   @include transition;
   transition-property: background-color, box-shadow;
 
-  &:hover,
-  &:focus {
-    background-color: $activeColor;
-    cursor: pointer;
+  @include desktop-screen {
+    width: 216px;
+    &:hover,
+    &:focus {
+      background-color: $activeColor;
+      cursor: pointer;
+    }
   }
 }
 .button--form {

@@ -1,7 +1,35 @@
 .container {
-  width: 1200px;
-
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  //phone screen
+  @include phone-screen {
+    width: 480px;
+  }
+
+  //tablet screen
+  @include tablet-screen {
+    width: 768px;
+  }
+
+  //desktop screen
+  @include desktop-screen {
+    width: 1200px;
+  }
+}
+.container--hero {
+  padding-left: 45px;
+  padding-right: 45px;
+
+  text-align: center;
+
+  @include tablet-screen {
+    padding-left: 189px;
+    padding-right: 189px;
+  }
+  @include desktop-screen {
+    padding-left: 237px;
+    padding-right: 237px;
+  }
 }

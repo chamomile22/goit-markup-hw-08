@@ -1,5 +1,5 @@
 .section--footer {
-  @include section(60px, 60px);
+  @include section-set(60px, 60px);
 
   background-color: $secondBgColor;
 }

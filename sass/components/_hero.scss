@@ -1,29 +1,74 @@
 .hero {
   max-width: 1600px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  @include section(200px, 200px);
+  @include section-set(118px, 118px);
 
   background-color: $heroBgColor;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../img/hero-back.jpg);
+    url(../img/hero/bg-img_sm.jpg);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero/bg-img_sm@2x.jpg);
+  }
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0;
-}
-.container--hero {
-  padding-left: 237px;
-  padding-right: 237px;
 
-  text-align: center;
+  @include tablet-screen {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero/bg-img_md.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/hero/bg-img_md@2x.jpg);
+    }
+  }
+  @include desktop-screen {
+    height: 600px;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero/bg-img_lg.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/hero/bg-img_lg@2x.jpg);
+    }
+
+    @include section-set(200px, 200px);
+  }
 }
 .hero__heading {
   color: $thirdTextColor;
 
   text-align: center;
   text-transform: uppercase;
-  @include text-styles($fontSizeH1, 900, $thirdLetterSpacing, 1.4);
+  @include text-styles($fontSizeH1, 900, $thirdLetterSpacing, 1.6);
+
+  @include desktop-screen {
+    font-size: $fontSizeH1Desktop;
+  }
 }

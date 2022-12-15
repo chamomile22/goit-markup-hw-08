@@ -4,6 +4,7 @@
   padding-right: 32px;
 
   display: flex;
+  justify-content: center;
   align-items: center;
 
   list-style: none;
@@ -30,10 +31,12 @@
   @include transition;
   transition-property: color, background-color;
 
-  &:hover,
-  &:focus {
-    color: $thirdTextColor;
-    background-color: $accentColor;
+  @include desktop-screen {
+    &:hover,
+    &:focus {
+      color: $thirdTextColor;
+      background-color: $accentColor;
+    }
   }
 }
 .socials__icon {

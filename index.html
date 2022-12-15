@@ -26,7 +26,7 @@
   </head>
   <body>
     <!--  Header  -->
-    <header class="header">
+    <!-- <header class="header">
       <div class="container">
         <nav class="nav">
           <a class="logo" href="index.html"
@@ -65,7 +65,7 @@
           </ul>
         </nav>
       </div>
-    </header>
+    </header> -->
 
     <main>
       <!--  Hero  -->
@@ -141,28 +141,40 @@
           <ul class="work__list">
             <li class="work__item">
               <img
-                src="./img/webstudio-img-1.jpg"
+                srcset="
+                  ./img/work/img-1_lg.jpg    370w,
+                  ./img/work/img-1_lg@2x.jpg 740w
+                "
+                sizes="(min-width: 1200px) 370px, 100vw"
+                src="./img/work/img-1_lg.jpg"
                 alt="typing"
-                width="370"
-                height="294"
+                loading="lazy"
               />
               <p class="work__text">Десктопні додатки</p>
             </li>
             <li class="work__item">
               <img
-                src="./img/webstudio-img-2.jpg"
+                srcset="
+                  ./img/work/img-2_lg.jpg    370w,
+                  ./img/work/img-2_lg@2x.jpg 740w
+                "
+                sizes="(min-width: 1200px) 370px, 100vw"
+                src="./img/work/img-2_lg.jpg"
                 alt="design"
-                width="370"
-                height="294"
+                loading="lazy"
               />
               <p class="work__text">Мобільні додатки</p>
             </li>
             <li class="work__item">
               <img
-                src="./img/webstudio-img-3.jpg"
+                srcset="
+                  ./img/work/img-3_lg.jpg    370w,
+                  ./img/work/img-3_lg@2x.jpg 740w
+                "
+                sizes="(min-width: 1200px) 370px, 100vw"
+                src="./img/work/img-3_lg.jpg"
                 alt="color-matching"
-                width="370"
-                height="294"
+                loading="lazy"
               />
               <p class="work__text">Дизайнерські рішення</p>
             </li>
@@ -177,10 +189,18 @@
           <ul class="team__list">
             <li class="team__item">
               <img
-                src="./img/member-1.jpg"
+                srcset="
+                  ./img/team/member-1_lg.jpg    270w,
+                  ./img/team/member-1_lg@2x.jpg 540w,
+                  ./img/team/member-1_md.jpg    354w,
+                  ./img/team/member-1_md@2x.jpg 708w,
+                  ./img/team/member-1_sm.jpg    450w,
+                  ./img/team/member-1_sm@2x.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./img/team/member-1_lg.jpg"
                 alt="Ihor Dem`yanenko"
-                width="270"
-                height="270"
+                loading="lazy"
               />
               <div class="team__member-info">
                 <h3 class="team__member-name">Ігор Дем'яненко</h3>
@@ -239,10 +259,18 @@
             </li>
             <li class="team__item">
               <img
-                src="./img/member-2.jpg"
+                srcset="
+                  ./img/team/member-2_lg.jpg    270w,
+                  ./img/team/member-2_lg@2x.jpg 540w,
+                  ./img/team/member-2_md.jpg    354w,
+                  ./img/team/member-2_md@2x.jpg 708w,
+                  ./img/team/member-2_sm.jpg    450w,
+                  ./img/team/member-2_sm@2x.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./img/team/mb-img-2.jpg"
                 alt="Olha Repina"
-                width="270"
-                height="270"
+                loading="lazy"
               />
               <div class="team__member-info">
                 <h3 class="team__member-name">Ольга Рєпіна</h3>
@@ -301,10 +329,18 @@
             </li>
             <li class="team__item">
               <img
-                src="./img/member-3.jpg"
+                srcset="
+                  ./img/team/member-3_lg.jpg    270w,
+                  ./img/team/member-3_lg@2x.jpg 540w,
+                  ./img/team/member-3_md.jpg    354w,
+                  ./img/team/member-3_md@2x.jpg 708w,
+                  ./img/team/member-3_sm.jpg    450w,
+                  ./img/team/member-3_sm@2x.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./img/team/mb-img-3.jpg"
                 alt="Mikola Tarasov"
-                width="270"
-                height="270"
+                loading="lazy"
               />
               <div class="team__member-info">
                 <h3 class="team__member-name">Микола Тарасов</h3>
@@ -363,10 +399,18 @@
             </li>
             <li class="team__item">
               <img
-                src="./img/member-4.jpg"
+                srcset="
+                  ./img/team/member-4_lg.jpg    270w,
+                  ./img/team/member-4_lg@2x.jpg 540w,
+                  ./img/team/member-4_md.jpg    354w,
+                  ./img/team/member-4_md@2x.jpg 708w,
+                  ./img/team/member-4_sm.jpg    450w,
+                  ./img/team/member-4_sm@2x.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./img/team/mb-img-4.jpg"
                 alt="Mykhaylo Ermakov"
-                width="270"
-                height="270"
+                loading="lazy"
               />
               <div class="team__member-info">
                 <h3 class="team__member-name">Михайло Єрмаков</h3>
@@ -510,7 +554,7 @@
     </main>
 
     <!--  Footer  -->
-    <footer class="section--footer">
+    <!-- <footer class="section--footer">
       <div class="container container--footer">
         <div>
           <a class="logo logo--footer" href="index.html"
@@ -614,7 +658,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!--  Modal window  -->
     <div class="backdrop is-hidden" data-modal>
