@@ -16,8 +16,8 @@
   pointer-events: none;
 }
 .modal {
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   padding-left: 40px;
   padding-right: 40px;
 
@@ -33,37 +33,14 @@
   @include transition(transform);
 
   transform: translateX(-50%) translateY(-50%);
+
+  @include desktop-screen {
+    width: 528px;
+    height: 581px;
+  }
 }
 .backdrop.is-hidden .modal {
   transform: translateX(-50%) translateY(-70%) scale(0.7);
-}
-.modal__button {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-
-  background-color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  position: absolute;
-  top: 8px;
-  right: 8px;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-
-  @include transition;
-
-  &:hover,
-  &:focus {
-    color: $accentColor;
-    cursor: pointer;
-  }
-}
-.modal__button-icon {
-  fill: currentColor;
 }
 
 .modal__heading {
@@ -71,11 +48,15 @@
   margin-bottom: 12px;
 
   text-align: center;
-  @include text-styles(20px, 700, false, 1.2);
+  @include text-styles(20px, 700, false, 1.5);
+
+  @include desktop-screen {
+    line-height: auto;
+  }
 }
 
 .modal__form-group {
-  width: 448px;
+  width: 100%;
   margin-bottom: 10px;
 
   display: block;
@@ -179,9 +160,12 @@
   align-items: center;
   gap: 8px;
 
-  font-size: 14px;
-  line-height: 1.7;
-  @include text-styles(14px, false, false, 1.7);
+  @include text-styles(12px, false, false, 1.7);
+
+  @include desktop-screen {
+    font-size: $forthFontSize;
+    line-height: auto;
+  }
 }
 .modal__form-checkbox-text {
   user-select: none;

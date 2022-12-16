@@ -1,21 +1,42 @@
 .footer-form {
-  margin-left: auto;
-  padding-top: 12px;
+  margin-top: 60px;
+
+  @include tablet-screen-only {
+    width: 100%;
+  }
+  @include desktop-screen {
+    margin-top: 0;
+    margin-left: auto;
+    padding-top: 12px;
+  }
 }
 .footer-form__heading {
   margin-bottom: 20px;
+  text-align: center;
 
   color: $thirdTextColor;
 
   text-transform: uppercase;
   @include text-styles($forthFontSize, 700, false, false);
+
+  @include desktop-screen {
+    text-align: left;
+  }
 }
 .footer-form__group {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop-screen {
+    flex-direction: row;
+    align-items: start;
+  }
 }
 .footer-form__field {
-  width: 358px;
+  width: 100%;
   height: 50px;
+  margin-bottom: 20px;
   padding: 15px;
 
   color: rgba(255, 255, 255, 0.6);
@@ -31,15 +52,23 @@
   @include transition;
   transition-property: border-width, border-color, color;
 
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+
+    @include text-styles($thirdFontSize, false, false, 1.25);
+  }
+
   &:focus {
     border-width: 1px;
     border-color: $accentColor;
     color: $thirdTextColor;
   }
 
-  &::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-
-    @include text-styles($thirdFontSize, false, false, 1.25);
+  @include tablet-screen {
+    width: 450px;
+  }
+  @include desktop-screen {
+    width: 358px;
+    margin-bottom: 0;
   }
 }

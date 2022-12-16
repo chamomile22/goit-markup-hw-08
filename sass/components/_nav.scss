@@ -2,13 +2,29 @@
   display: flex;
   align-items: center;
 
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include tablet-screen {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @include desktop-screen {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .nav__list {
-  display: flex;
+  display: none;
   list-style: none;
+
+  @include tablet-screen {
+    display: flex;
+  }
+  @include desktop-screen {
+    display: flex;
+  }
 }
 .nav__item {
   position: relative;
@@ -49,5 +65,9 @@
     background-color: $accentColor;
 
     border-radius: 2px;
+
+    @include tablet-screen-only {
+      bottom: -33px;
+    }
   }
 }

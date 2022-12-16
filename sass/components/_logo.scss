@@ -1,6 +1,4 @@
 .logo {
-  margin-right: 95px;
-
   color: $accentColor;
 
   text-decoration: none;
@@ -9,6 +7,14 @@
     sans-serif;
   font-size: $logoFontSize;
   font-weight: 700;
+
+  @include tablet-screen {
+    margin-right: 87px;
+  }
+  @include desktop-screen {
+    margin-right: 95px;
+    font-size: $logoFontSizeDesktop;
+  }
 }
 .logo--black {
   color: black;

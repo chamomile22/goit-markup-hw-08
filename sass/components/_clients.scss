@@ -42,7 +42,6 @@
   @include desktop-screen {
     min-width: 170px;
     margin-top: 0;
-    //margin-right: 0;
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -64,16 +63,17 @@
   @include transition;
   transition-property: color, border-color;
 
+  &:hover,
+  &:focus {
+    color: $accentColor;
+    border-color: $accentColor;
+  }
+
   @include tablet-screen {
     flex-basis: calc((100% - 60px) / 3);
   }
   @include desktop-screen {
     flex-basis: calc(100% / 6);
-    &:hover,
-    &:focus {
-      color: $accentColor;
-      border-color: $accentColor;
-    }
   }
 }
 .clients__icon {

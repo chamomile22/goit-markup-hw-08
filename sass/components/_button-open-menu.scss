@@ -1,0 +1,17 @@
+.btn-open {
+  margin-left: auto;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  @include tablet-screen {
+    display: none;
+  }
+}

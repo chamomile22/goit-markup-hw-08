@@ -5,7 +5,7 @@
 
   //phone screen
   @include phone-screen {
-    width: 480px;
+    min-width: 480px;
   }
 
   //tablet screen
@@ -16,6 +16,11 @@
   //desktop screen
   @include desktop-screen {
     width: 1200px;
+  }
+}
+.container--header {
+  @include phone-screen-only {
+    margin: 0;
   }
 }
 .container--hero {
@@ -31,5 +36,15 @@
   @include desktop-screen {
     padding-left: 237px;
     padding-right: 237px;
+  }
+}
+.container--footer {
+  @include tablet-screen-only {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @include desktop-screen {
+    display: flex;
   }
 }

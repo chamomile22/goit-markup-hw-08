@@ -2,16 +2,33 @@
   display: flex;
   margin-left: auto;
   list-style: none;
+
+  @include phone-screen-only {
+    display: none;
+  }
+  @include tablet-screen-only {
+    display: block;
+  }
 }
 .contacts__icon {
   fill: currentColor;
   margin-right: 10px;
 }
 .contacts__item {
-  margin-right: 50px;
+  @include tablet-screen-only {
+    justify-content: start;
+    margin-bottom: 10px;
 
-  &:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include desktop-screen {
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 .contacts__link {
@@ -29,9 +46,10 @@
   &:focus {
     color: $accentColor;
   }
-}
-.container--footer {
-  display: flex;
+
+  @include tablet-screen-only {
+    font-size: 12px;
+  }
 }
 .contacts__item--footer,
 .contacts__item--map {

@@ -1,18 +1,52 @@
 .section--footer {
-  @include section-set(60px, 60px);
+  @include section;
 
   background-color: $secondBgColor;
+
+  @include desktop-screen {
+    @include section-set(60px, 60px);
+  }
+}
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop-screen {
+    align-items: start;
+  }
 }
 .address__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin-top: 20px;
 
   list-style: none;
   font-style: normal;
   @include text-styles($forthFontSize, false, false, 1.7);
+
+  @include desktop-screen {
+    align-items: start;
+  }
 }
 .footer-socials {
-  margin-top: 12px;
-  margin-left: 70px;
+  margin-top: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet-screen {
+    margin-top: 0;
+  }
+  @include desktop-screen {
+    margin-top: 12px;
+    margin-left: 70px;
+
+    align-items: start;
+  }
 }
 .footer-socials__heading {
   margin-bottom: 20px;
