@@ -1630,8 +1630,8 @@ img {
   text-decoration: none;
   font-size: 40px;
   font-weight: 500;
-  letter-spacing: auto;
-  line-height: 0.02em;
+  letter-spacing: 0.02em;
+  line-height: auto;
 }
 
 .mobile-nav__link--current {
