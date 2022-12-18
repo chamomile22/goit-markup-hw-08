@@ -5,7 +5,7 @@
 
   //phone screen
   @include phone-screen {
-    min-width: 480px;
+    width: 480px;
   }
 
   //tablet screen
@@ -20,7 +20,7 @@
 }
 .container--header {
   @include phone-screen-only {
-    margin: 0;
+    margin: 0 auto;
   }
 }
 .container--hero {

@@ -54,10 +54,6 @@
   margin-bottom: 64px;
 
   list-style: none;
-
-  @include phone-screen-320 {
-    margin-bottom: 50px;
-  }
 }
 .mobile-contacts__item {
   &:not(:last-child) {
